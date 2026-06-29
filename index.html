@@ -82,6 +82,90 @@
             position: relative;
         }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Generated | Sabbir Modz</title>
+    <style>
+        :root { --bg: #000000; --card: #121212; --text: #ffffff; --accent: #00ff88; --error: #ff4444; }
+        
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container { 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* --- UI Visibility Controls --- */
+        #mainContainer { display: none; }
+        #bypassContainer { display: none; }
+
+        /* --- BYPASS ERROR CARD --- */
+        .error-card { 
+            background: #1a0a0a; 
+            border: 1px solid #441111; 
+            border-radius: 28px; 
+            padding: 40px 30px; 
+            box-shadow: 0 10px 40px rgba(255,0,0,0.1);
+        }
+        .error-icon { font-size: 50px; margin-bottom: 20px; }
+        .error-title { color: var(--error); font-size: 24px; font-weight: bold; margin-bottom: 15px; }
+
+        .key-icon { 
+            background: #1a1a1a; 
+            width: 85px; 
+            height: 85px; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin: -45px auto 15px; 
+            border: 1px solid #333; 
+            overflow: hidden; 
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .key-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (min-width: 768px) {
+            .container { max-width: 450px; }
+            .key-icon { width: 110px; height: 110px; margin: -55px auto 20px; }
+        }
+
+        h1 { font-size: 28px; font-weight: bold; margin-bottom: 8px; }
+        .subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+
+        .card { 
+            background: var(--card); 
+            border: 1px solid #222; 
+            border-radius: 28px; 
+            padding: 40px 30px 30px; 
+            text-align: center; 
+            box-shadow: 0 15px 50px rgba(0,0,0,0.6); 
+            position: relative;
+        }
+
         h2 { font-size: 22px; margin-bottom: 12px; color: var(--accent); font-weight: 700; }
         .card-p { color: #999; font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
 
@@ -249,4 +333,3 @@
 </script>
 </body>
 </html>
-
