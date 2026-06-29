@@ -3,235 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Free Key</title>
+<title>Auto Refresh</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta http-equiv="refresh" content="30">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-overflow:hidden;
-background:#07120f;
-background:
-radial-gradient(circle at top,#00ff8840 0%,transparent 35%),
-radial-gradient(circle at bottom,#00ff8825 0%,transparent 40%),
-#07120f;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#111;
+    color:#fff;
+    font-family:Arial,sans-serif;
 }
-
-body::before{
-content:"";
-position:fixed;
-width:350px;
-height:350px;
-background:#00ff8840;
-filter:blur(120px);
-top:-120px;
-left:-120px;
-z-index:-1;
-}
-
-body::after{
-content:"";
-position:fixed;
-width:300px;
-height:300px;
-background:#00ff8825;
-filter:blur(120px);
-right:-100px;
-bottom:-100px;
-z-index:-1;
-}
-
 .card{
-width:100%;
-max-width:420px;
-padding:35px 28px;
-border-radius:28px;
-background:rgba(18,26,22,.78);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.08);
-box-shadow:0 0 30px rgba(0,255,136,.15);
-text-align:center;
-transition:.35s;
+    text-align:center;
+    padding:30px;
+    background:#222;
+    border-radius:15px;
 }
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.logo{
-width:110px;
-height:110px;
-margin:auto;
-border-radius:50%;
-border:4px solid #00ff88;
-overflow:hidden;
-background:#15211b;
-box-shadow:0 0 30px #00ff88;
-animation:pulse 2.5s infinite;
-}
-
-.logo img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 15px #00ff88;}
-50%{box-shadow:0 0 45px #00ff88;}
-100%{box-shadow:0 0 15px #00ff88;}
-}
-
-h1{
-margin-top:22px;
-font-size:36px;
-color:#fff;
-font-weight:700;
-}
-
-.subtitle{
-margin-top:10px;
-color:#b4b4b4;
-font-size:16px;
-margin-bottom:28px;
-}
-
-.notice{
-text-align:left;
-background:#1d1d1d;
-border-left:5px solid #00ff88;
-padding:20px;
-border-radius:16px;
-margin-bottom:28px;
-}
-
-.notice h3{
-color:#fff;
-font-size:20px;
-margin-bottom:14px;
-}
-
-.notice p{
-color:#d5d5d5;
-margin:8px 0;
-font-size:15px;
-}
-
-.btn{
-width:100%;
-padding:18px;
-border:none;
-border-radius:16px;
-background:linear-gradient(90deg,#00ff88,#00d96d);
-font-size:22px;
-font-weight:700;
-cursor:pointer;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 0 25px #00ff88;
-}
-
-.btn:disabled{
-opacity:.7;
-cursor:not-allowed;
-}
-
-.footer{
-margin-top:25px;
-color:#8f8f8f;
-font-size:14px;
-}
-
-@media(max-width:480px){
-
-.logo{
-width:90px;
-height:90px;
-}
-
-h1{
-font-size:28px;
-}
-
-.btn{
-font-size:18px;
-}
-
-.notice h3{
-font-size:18px;
-}
-
-.notice p{
-font-size:14px;
-}
-
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:#00cc66;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
 }
 </style>
 </head>
-
 <body>
 
 <div class="card">
+    <h1>Get Free Key</h1>
+    <p>এই পেজটি প্রতি ৩০ সেকেন্ডে অটো রিফ্রেশ হবে।</p>
 
-<div class="logo">
-<img src="./assets/logo.png" alt="Logo">
-</div>
-
-<h1>Get Free Key</h1>
-
-<p class="subtitle">
-Complete verification to continue.
-</p>
-
-<div class="notice">
-<h3>🛡 Security Notice</h3>
-
-<p>✅ Human verification required.</p>
-
-<p>🤖 Bots are not allowed.</p>
-
-<p>🔒 Return after completing verification.</p>
-</div>
-
-<button class="btn" id="continueBtn">
-Continue →
-</button>
-
-<div class="footer">
-Powered by Sabbir Modz
-</div>
-
+    <button onclick="go()">Continue</button>
 </div>
 
 <script>
-const btn=document.getElementById("continueBtn");
-
-btn.onclick=function(){
-
-btn.disabled=true;
-btn.innerHTML="Please wait...";
-
-setTimeout(()=>{
-window.location.href="https://l85874574-dot.github.io/Sabbir/index.html?source=official";
-},1200);
-
-};
+function go(){
+    location.href="https://example.com";
+}
 </script>
 
 </body>
-</html></html>
+</html>
