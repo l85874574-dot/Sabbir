@@ -199,6 +199,47 @@ body{
     text-align:center;
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Free Key | Premium UI</title>
+
+<style>
+:root{
+    --bg1:#050505;
+    --bg2:#0f0f0f;
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+    --text:#ffffff;
+    --muted:#9aa0a6;
+    --accent:#00ffcc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    color:var(--text);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+}
+
 /* LOGO */
 .key-icon{
     width:90px;
@@ -206,10 +247,10 @@ body{
     margin:0 auto 15px;
     border-radius:50%;
     overflow:hidden;
-    background:#111;
-    border:1px solid #222;
-    box-shadow:0 0 25px rgba(255,255,255,0.08);
-    animation:float 3s ease-in-out infinite;
+    border:1px solid var(--border);
+    background:var(--card);
+    box-shadow:0 0 25px rgba(0,255,204,0.15);
+    backdrop-filter: blur(10px);
 }
 
 .key-icon img{
@@ -218,32 +259,28 @@ body{
     object-fit:cover;
 }
 
-@keyframes float{
-    50%{transform:translateY(-6px);}
-}
-
-/* TEXT */
 h1{
-    font-size:28px;
-    margin:10px 0;
-    letter-spacing:1px;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:0.5px;
 }
 
 .subtitle{
-    font-size:14px;
     color:var(--muted);
+    font-size:14px;
+    margin-top:6px;
     margin-bottom:25px;
 }
 
 /* PROGRESS */
-.progress-container{
+.progress{
     display:flex;
     align-items:center;
     justify-content:space-between;
     margin-bottom:20px;
 }
 
-.step-indicator{
+.step{
     display:flex;
     align-items:center;
     gap:8px;
@@ -252,97 +289,85 @@ h1{
 }
 
 .circle{
-    width:22px;
-    height:22px;
+    width:24px;
+    height:24px;
     border-radius:50%;
-    border:2px solid #333;
+    border:1px solid var(--border);
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:10px;
+    justify-content:center;
+    font-size:11px;
 }
 
 .circle.active{
-    background:#fff;
-    color:#000;
-    box-shadow:0 0 15px rgba(255,255,255,0.4);
+    border-color:var(--accent);
+    color:var(--accent);
+    box-shadow:0 0 10px rgba(0,255,204,0.4);
 }
 
 .line{
     flex:1;
-    height:3px;
-    margin:0 12px;
-    background:linear-gradient(90deg,#444,#999);
-    border-radius:10px;
+    height:1px;
+    background:var(--border);
+    margin:0 10px;
 }
 
 /* CARD */
 .card{
     background:var(--card);
     border:1px solid var(--border);
-    backdrop-filter:blur(18px);
-    border-radius:26px;
-    padding:28px;
+    border-radius:20px;
+    padding:25px;
     text-align:left;
-    box-shadow:0 20px 50px rgba(0,0,0,0.6);
-    animation:fade .8s ease;
+    backdrop-filter: blur(14px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.6);
 }
 
-@keyframes fade{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+.card h2{
+    font-size:18px;
+    margin-bottom:10px;
 }
 
-h2{
-    margin:0 0 10px;
-    font-size:20px;
-}
-
-.card-p{
+.card p{
     color:var(--muted);
     font-size:14px;
-    line-height:1.5;
-    margin-bottom:20px;
+    line-height:1.6;
 }
 
 /* WARNING */
 .warning{
-    background:rgba(255,200,0,0.08);
-    border:1px solid rgba(255,200,0,0.2);
+    margin-top:18px;
     padding:12px;
     border-radius:12px;
+    border:1px solid rgba(255,165,0,0.3);
+    background:rgba(255,165,0,0.08);
     display:flex;
     gap:10px;
-    margin-bottom:25px;
 }
 
 .warning-icon{
-    color:var(--warn);
+    color:orange;
 }
 
 /* BUTTON */
 .btn{
     width:100%;
-    padding:16px;
+    margin-top:22px;
+    padding:15px;
     border:none;
     border-radius:14px;
-    font-size:16px;
-    font-weight:700;
+    font-size:15px;
+    font-weight:600;
     cursor:pointer;
-    background:linear-gradient(135deg,#fff,#ddd);
-    transition:.3s;
+    color:#000;
+    background:linear-gradient(135deg, #00ffcc, #00ffaa);
+    box-shadow:0 0 20px rgba(0,255,204,0.25);
+    transition:0.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(255,255,255,0.2);
-    background:linear-gradient(135deg,#ffffff,#00ff99);
-}
-
-/* MOBILE */
-@media(max-width:480px){
-    h1{font-size:24px;}
-    .card{padding:22px;}
+    transform:translateY(-2px) scale(1.02);
+    box-shadow:0 0 30px rgba(0,255,204,0.4);
 }
 </style>
 </head>
@@ -352,42 +377,43 @@ h2{
 <div class="container">
 
     <div class="key-icon">
-        <img src="./assets/logo.png" alt="UKM">
+        <img src="./assets/logo.png" alt="logo">
     </div>
 
-    <h1>GET FREE KEY</h1>
-    <p class="subtitle">Complete the step below to receive your access key.</p>
+    <h1>Get Free Key</h1>
+    <p class="subtitle">Complete the step below to receive your access key</p>
 
-    <div class="progress-container">
-        <div class="step-indicator">
+    <div class="progress">
+        <div class="step">
             <div class="circle active">1</div>
-            <span>Step 1 of 1</span>
+            <span>Step 1</span>
         </div>
+
         <div class="line"></div>
-        <div class="circle"></div>
+
+        <div class="circle">2</div>
     </div>
 
     <div class="card">
-
-        <h2>First Step</h2>
-        <p class="card-p">
-            To continue, click the button below to complete the first step. You will be redirected and then return to this page once finished.
+        <h2>First Verification Step</h2>
+        <p>
+            Click the button below to continue. After completing the step, you will be redirected back automatically.
         </p>
 
         <div class="warning">
             <div class="warning-icon">⚠️</div>
             <div>
-                <div><b>Security Notice</b></div>
-                <div style="font-size:12px;color:#caa;">
-                    The use of bots or automation will result in your key being banned.
-                </div>
+                <b style="color:orange;font-size:13px;">Security Notice</b><br>
+                <span style="font-size:12px;color:#caa;">
+                    Automation or bots may result in key restriction.
+                </span>
             </div>
         </div>
 
-        <button class="btn" onclick="location.href='https://l85874574-dot.github.io/Sabbir/index.html?source=official'">
-            Continue to Step ➜
+        <button class="btn"
+        onclick="location.href='https://l85874574-dot.github.io/Sabbir/index.html?source=official'">
+            Continue Securely →
         </button>
-
     </div>
 
 </div>
