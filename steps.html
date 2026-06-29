@@ -365,9 +365,238 @@ h1{
     transition:0.3s;
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Key Access</title>
+
+<style>
+:root{
+    --bg1:#05060a;
+    --bg2:#0b1020;
+    --glass: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+    --text:#ffffff;
+    --muted:#9aa4b2;
+    --accent:#00ffd5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: radial-gradient(circle at 20% 20%, #101a2e, #05060a 60%);
+    overflow:hidden;
+    color:var(--text);
+    padding:20px;
+}
+
+/* animated glow background */
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background: radial-gradient(circle, rgba(0,255,213,0.15), transparent 60%);
+    top:-150px;
+    left:-150px;
+    filter: blur(40px);
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background: radial-gradient(circle, rgba(120,80,255,0.12), transparent 60%);
+    bottom:-150px;
+    right:-150px;
+    filter: blur(40px);
+    animation: float2 7s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(30px);}
+}
+@keyframes float2{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-30px);}
+}
+
+.container{
+    width:100%;
+    max-width:430px;
+    text-align:center;
+    z-index:1;
+}
+
+/* LOGO */
+.logo{
+    width:92px;
+    height:92px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:var(--glass);
+    backdrop-filter: blur(16px);
+    box-shadow:0 0 25px rgba(0,255,213,0.15);
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* TITLE */
+h1{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:0.6px;
+    background: linear-gradient(90deg,#fff,#00ffd5);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    color:var(--muted);
+    font-size:14px;
+    margin-top:6px;
+    margin-bottom:25px;
+}
+
+/* PROGRESS */
+.progress{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+
+.step{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:var(--muted);
+}
+
+.circle{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+}
+
+.circle.active{
+    border-color:var(--accent);
+    color:var(--accent);
+    box-shadow:0 0 12px rgba(0,255,213,0.5);
+}
+
+.line{
+    flex:1;
+    height:1px;
+    background:var(--border);
+    margin:0 10px;
+}
+
+/* CARD */
+.card{
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:26px;
+    text-align:left;
+    backdrop-filter: blur(18px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    transform: translateY(0);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform: translateY(-3px);
+}
+
+.card h2{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* WARNING */
+.warning{
+    margin-top:18px;
+    padding:12px;
+    border-radius:14px;
+    border:1px solid rgba(255,180,0,0.3);
+    background:rgba(255,180,0,0.08);
+    display:flex;
+    gap:10px;
+}
+
+/* BUTTON */
+.btn{
+    width:100%;
+    margin-top:22px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    color:#000;
+    background: linear-gradient(135deg, #00ffd5, #00ffaa);
+    box-shadow:0 0 25px rgba(0,255,213,0.25);
+    transition:0.25s;
+    position:relative;
+    overflow:hidden;
+}
+
+.btn::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:-100%;
+    background:rgba(255,255,255,0.3);
+    transform:skewX(-20deg);
+}
+
+.btn:hover::after{
+    animation: shine 0.6s forwards;
+}
+
+@keyframes shine{
+    to{left:120%;}
+}
+
 .btn:hover{
-    transform:translateY(-2px) scale(1.02);
-    box-shadow:0 0 30px rgba(0,255,204,0.4);
+    transform:scale(1.03);
+    box-shadow:0 0 35px rgba(0,255,213,0.45);
 }
 </style>
 </head>
@@ -376,17 +605,17 @@ h1{
 
 <div class="container">
 
-    <div class="key-icon">
+    <div class="logo">
         <img src="./assets/logo.png" alt="logo">
     </div>
 
-    <h1>Get Free Key</h1>
-    <p class="subtitle">Complete the step below to receive your access key</p>
+    <h1>Premium Access</h1>
+    <p class="subtitle">Secure verification required to continue</p>
 
     <div class="progress">
         <div class="step">
             <div class="circle active">1</div>
-            <span>Step 1</span>
+            <span>Verify</span>
         </div>
 
         <div class="line"></div>
@@ -395,23 +624,23 @@ h1{
     </div>
 
     <div class="card">
-        <h2>First Verification Step</h2>
+        <h2>Security Verification</h2>
         <p>
-            Click the button below to continue. After completing the step, you will be redirected back automatically.
+            Complete the first step to unlock your access key. You will be redirected and returned automatically.
         </p>
 
         <div class="warning">
-            <div class="warning-icon">⚠️</div>
+            <div>⚠️</div>
             <div>
-                <b style="color:orange;font-size:13px;">Security Notice</b><br>
-                <span style="font-size:12px;color:#caa;">
-                    Automation or bots may result in key restriction.
+                <b style="color:#ffb300;font-size:13px;">Anti-Bot Protection</b><br>
+                <span style="font-size:12px;color:#c8c8c8;">
+                    Automated requests or suspicious activity may block access.
                 </span>
             </div>
         </div>
 
         <button class="btn"
-        onclick="location.href='https://l85874574-dot.github.io/Sabbir/index.html?source=official'">
+        onclick="window.location.href='https://l85874574-dot.github.io/Sabbir/index.html?source=official'">
             Continue Securely →
         </button>
     </div>
