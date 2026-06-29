@@ -1,114 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get a Free Key | Sabbir Modz</title>
-    <style>
-        :root { --bg: #000000; --card: #121212; --text: #ffffff; --accent: #ffffff; --warning-bg: #1a1505; --warning-border: #3d3002; --warning-text: #eec136; }
-        
-        body { 
-            background-color: var(--bg); 
-            color: var(--text); 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-            padding: 20px;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Free Key</title>
 
-        .container { 
-            width: 100%; 
-            max-width: 400px; 
-            text-align: center; 
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* --- LOGO FIX FOR PC & MOBILE --- */
-        .key-icon { 
-            background: #1a1a1a; 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 50%; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            margin: 0 auto 15px; 
-            border: 1px solid #333; 
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255,255,255,0.05);
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        .key-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-        }
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+background:#07120f;
+background:
+radial-gradient(circle at top,#00ff8840 0%,transparent 35%),
+radial-gradient(circle at bottom,#00ff8825 0%,transparent 40%),
+#07120f;
+}
 
-        @media (min-width: 768px) {
-            .container { max-width: 480px; }
-            .key-icon { width: 110px; height: 110px; } 
-        }
+body::before{
+content:"";
+position:fixed;
+width:350px;
+height:350px;
+background:#00ff8840;
+filter:blur(120px);
+top:-120px;
+left:-120px;
+z-index:-1;
+}
 
-        h1 { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
-        .subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
-        
-        .progress-container { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
-        .step-indicator { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #888; }
-        .circle { width: 22px; height: 22px; border: 2px solid #333; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 10px; }
-        .circle.active { border-color: var(--text); color: var(--text); }
-        .line { flex-grow: 1; height: 2px; background: #222; margin: 0 15px; }
+body::after{
+content:"";
+position:fixed;
+width:300px;
+height:300px;
+background:#00ff8825;
+filter:blur(120px);
+right:-100px;
+bottom:-100px;
+z-index:-1;
+}
 
-        .card { background: var(--card); border: 1px solid #222; border-radius: 24px; padding: 30px; text-align: left; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
-        h2 { font-size: 20px; margin-bottom: 15px; }
-        .card-p { color: #888; font-size: 15px; line-height: 1.5; margin-bottom: 25px; }
+.card{
+width:100%;
+max-width:420px;
+padding:35px 28px;
+border-radius:28px;
+background:rgba(18,26,22,.78);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 30px rgba(0,255,136,.15);
+text-align:center;
+transition:.35s;
+}
 
-        .warning { background: var(--warning-bg); border: 1px solid var(--warning-border); border-radius: 12px; padding: 15px; display: flex; gap: 12px; margin-bottom: 30px; }
-        .warning-icon { color: var(--warning-text); font-size: 18px; }
-        .warning-title { color: var(--warning-text); font-weight: bold; font-size: 14px; }
-        .warning-text { color: #8a701f; font-size: 12px; }
+.card:hover{
+transform:translateY(-5px);
+}
 
-        .btn { width: 100%; padding: 16px; background: #ffffff; color: #000; border: none; border-radius: 14px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s ease; }
-        .btn:hover { transform: scale(1.02); background: #00ff88; }
-    </style>
+.logo{
+width:110px;
+height:110px;
+margin:auto;
+border-radius:50%;
+border:4px solid #00ff88;
+overflow:hidden;
+background:#15211b;
+box-shadow:0 0 30px #00ff88;
+animation:pulse 2.5s infinite;
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 15px #00ff88;}
+50%{box-shadow:0 0 45px #00ff88;}
+100%{box-shadow:0 0 15px #00ff88;}
+}
+
+h1{
+margin-top:22px;
+font-size:36px;
+color:#fff;
+font-weight:700;
+}
+
+.subtitle{
+margin-top:10px;
+color:#b4b4b4;
+font-size:16px;
+margin-bottom:28px;
+}
+
+.notice{
+text-align:left;
+background:#1d1d1d;
+border-left:5px solid #00ff88;
+padding:20px;
+border-radius:16px;
+margin-bottom:28px;
+}
+
+.notice h3{
+color:#fff;
+font-size:20px;
+margin-bottom:14px;
+}
+
+.notice p{
+color:#d5d5d5;
+margin:8px 0;
+font-size:15px;
+}
+
+.btn{
+width:100%;
+padding:18px;
+border:none;
+border-radius:16px;
+background:linear-gradient(90deg,#00ff88,#00d96d);
+font-size:22px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px #00ff88;
+}
+
+.btn:disabled{
+opacity:.7;
+cursor:not-allowed;
+}
+
+.footer{
+margin-top:25px;
+color:#8f8f8f;
+font-size:14px;
+}
+
+@media(max-width:480px){
+
+.logo{
+width:90px;
+height:90px;
+}
+
+h1{
+font-size:28px;
+}
+
+.btn{
+font-size:18px;
+}
+
+.notice h3{
+font-size:18px;
+}
+
+.notice p{
+font-size:14px;
+}
+
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="key-icon">
-        <img src="./assets/logo.png" alt="UKM">
-    </div>
-    <h1>Get a Free Key</h1>
-    <p class="subtitle">Complete the step below to receive your access key.</p>
+<div class="card">
 
-    <div class="progress-container">
-        <div class="step-indicator">
-            <div class="circle active">1</div>
-            <span>Step 1 of 1</span>
-        </div>
-        <div class="line"></div>
-        <div class="circle" style="background: #111;"></div>
-    </div>
-
-    <div class="card">
-        <h2>First Step</h2>
-        <p class="card-p">To continue, click the button below to complete the first step. You will be redirected and then return to this page once finished.</p>
-
-        <div class="warning">
-            <div class="warning-icon">⚠️</div>
-            <div>
-                <div class="warning-title">Security Notice</div>
-                <div class="warning-text">The use of bots or any kind of automation will result in your key being banned.</div>
-            </div>
-        </div>
-
-        <button class="btn" onclick="location.href='https://earnlinks.in/u6S7k'">
-            Continue to Step ➜
-        </button>
-    </div>
+<div class="logo">
+<img src="./assets/logo.png" alt="Logo">
 </div>
 
+<h1>Get Free Key</h1>
+
+<p class="subtitle">
+Complete verification to continue.
+</p>
+
+<div class="notice">
+<h3>🛡 Security Notice</h3>
+
+<p>✅ Human verification required.</p>
+
+<p>🤖 Bots are not allowed.</p>
+
+<p>🔒 Return after completing verification.</p>
+</div>
+
+<button class="btn" id="continueBtn">
+Continue →
+</button>
+
+<div class="footer">
+Powered by Sabbir Modz
+</div>
+
+</div>
+
+<script>
+const btn=document.getElementById("continueBtn");
+
+btn.onclick=function(){
+
+btn.disabled=true;
+btn.innerHTML="Please wait...";
+
+setTimeout(()=>{
+window.location.href="https://earnlinks.in/u6S7k";
+},1200);
+
+};
+</script>
+
 </body>
-</html>
+</html></html>
