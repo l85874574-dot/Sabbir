@@ -1,188 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Generated | Sabbir modz</title>
-    <style>
-        :root { --bg: #000000; --card: #121212; --text: #ffffff; --accent: #00ff88; --error: #ff4444; }
-        
-        body { 
-            background-color: var(--bg); 
-            color: var(--text); 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-            padding: 20px;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key Generated | Sabbir Modz</title>
 
-        .container { 
-            width: 100%; 
-            max-width: 400px; 
-            text-align: center;
-            margin-top: 50px;
-        }
+<style>
+:root {
+    --bg: #050607;
+    --card: #0f1412;
+    --text: #e6fff3;
+    --accent: #00ff88;
+    --accent-glow: rgba(0, 255, 136, 0.25);
+    --error: #ff3b3b;
+}
 
-        /* --- UI Visibility Controls --- */
-        #mainContainer { display: none; }
-        #bypassContainer { display: none; }
+body {
+    background: radial-gradient(circle at top, #0a1a14, #050607);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
 
-        /* --- BYPASS ERROR CARD --- */
-        .error-card { 
-            background: #1a0a0a; 
-            border: 1px solid #441111; 
-            border-radius: 28px; 
-            padding: 40px 30px; 
-            box-shadow: 0 10px 40px rgba(255,0,0,0.1);
-        }
-        .error-icon { font-size: 50px; margin-bottom: 20px; }
-        .error-title { color: var(--error); font-size: 24px; font-weight: bold; margin-bottom: 15px; }
+.container {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
 
-        .key-icon { 
-            background: #1a1a1a; 
-            width: 85px; 
-            height: 85px; 
-            border-radius: 50%; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            margin: -45px auto 15px; 
-            border: 1px solid #333; 
-            overflow: hidden; 
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.1);
-            position: relative;
-            z-index: 10;
-        }
+/* ICON */
+.key-icon {
+    width: 90px;
+    height: 90px;
+    margin: -45px auto 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,255,136,0.3);
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 25px rgba(0,255,136,0.15);
+    overflow: hidden;
+}
 
-        .key-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.key-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        @media (min-width: 768px) {
-            .container { max-width: 450px; }
-            .key-icon { width: 110px; height: 110px; margin: -55px auto 20px; }
-        }
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #0f1412, #0b0f0d);
+    border: 1px solid rgba(0,255,136,0.15);
+    border-radius: 28px;
+    padding: 40px 25px;
+    box-shadow: 0 0 45px rgba(0,255,136,0.08);
+    animation: glowPulse 3s infinite ease-in-out;
+}
 
-        h1 { font-size: 28px; font-weight: bold; margin-bottom: 8px; }
-        .subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 15px rgba(0,255,136,0.08); }
+    50% { box-shadow: 0 0 35px rgba(0,255,136,0.20); }
+    100% { box-shadow: 0 0 15px rgba(0,255,136,0.08); }
+}
 
-        .card { 
-            background: var(--card); 
-            border: 1px solid #222; 
-            border-radius: 28px; 
-            padding: 40px 30px 30px; 
-            text-align: center; 
-            box-shadow: 0 15px 50px rgba(0,0,0,0.6); 
-            position: relative;
-        }
+/* TEXT */
+h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
 
-        h2 { font-size: 22px; margin-bottom: 12px; color: var(--accent); font-weight: 700; }
-        .card-p { color: #999; font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
+h2 {
+    color: var(--accent);
+    font-size: 20px;
+}
 
-        .key-box { 
-            background: #000; 
-            padding: 22px; 
-            border-radius: 18px; 
-            border: 1px dashed var(--accent); 
-            margin-bottom: 25px; 
-            position: relative; 
-            overflow: hidden; 
-        }
-        
-        #finalKey { 
-            color: var(--accent); 
-            font-family: 'Courier New', monospace; 
-            font-size: 19px; 
-            font-weight: bold; 
-            letter-spacing: 1px; 
-        }
-        
-        .btn { 
-            width: 100%; 
-            padding: 18px; 
-            background: #ffffff; 
-            color: #000; 
-            border: none; 
-            border-radius: 16px; 
-            font-size: 16px; 
-            font-weight: 800; 
-            cursor: pointer; 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        }
+.subtitle {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
 
-        .btn:hover { 
-            transform: scale(1.03); 
-            background: var(--accent); 
-            box-shadow: 0 10px 20px rgba(0,255,136,0.2);
-        }
+/* KEY BOX */
+.key-box {
+    background: rgba(0,0,0,0.6);
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 20px rgba(0,255,136,0.15);
+    margin: 20px 0;
+}
 
-        .btn-red { background: var(--error); color: white; margin-top: 20px; }
+#finalKey {
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
 
-        .footer { 
-            margin-top: 80px; 
-            color: #333; 
-            font-size: 10px; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
-            font-weight: bold; 
-        }
-    </style>
+/* BUTTON */
+.btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00ff88, #00c86a);
+    color: #000;
+    box-shadow: 0 0 20px var(--accent-glow);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 35px rgba(0,255,136,0.4);
+}
+
+/* ERROR */
+.error-card {
+    background: #120707;
+    border: 1px solid #3a0f0f;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.error-title {
+    color: var(--error);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    font-size: 10px;
+    color: #333;
+    letter-spacing: 2px;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
+
     <div id="mainContainer">
+
         <div class="key-icon">
-            <img src="./assets/logo.png" alt="UKM">
+            <img src="./assets/logo.png" alt="logo">
         </div>
 
         <h1>Access Unlocked</h1>
-        <p class="subtitle">Your device-locked license key is ready.</p>
+        <p class="subtitle">Your secure license key is ready</p>
 
         <div class="card">
-            <h2>Generation Success!</h2>
-            <p class="card-p">This key is locked to your device. Share it, and it won't work for others.</p>
+
+            <h2>Generation Success</h2>
 
             <div class="key-box">
-                <span id="finalKey">SECURE FETCHING...</span>
+                <span id="finalKey">GENERATING...</span>
             </div>
 
             <button class="btn" id="copyBtn" onclick="copyKey()">
-                COPY TO CLIPBOARD
+                COPY KEY
             </button>
+
         </div>
     </div>
 
-    <div id="bypassContainer">
+    <div id="bypassContainer" style="display:none;">
         <div class="error-card">
-            <div class="error-icon">🚫</div>
-            <div class="error-title">Bypass Detected!</div>
-            <p style="color:#888; font-size: 14px; line-height: 1.5;">Direct access is prohibited. Please use the official link from the script to generate your key.</p>
-            <button class="btn btn-red" onclick="location.href='steps.html'">RETURN TO STEPS</button>
+            <div class="error-title">Bypass Detected 🚫</div>
+            <p style="color:#888;font-size:13px;">
+                Direct access not allowed. Please use official link.
+            </p>
         </div>
     </div>
 
-    <div class="footer">SABBIR MODZ SECURITY SYSTEM</div>
+    <div class="footer">SABBIR MODZ SYSTEM</div>
 </div>
 
 <script>
-    async function checkSecurity() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const source = urlParams.get('source');
-        const referrer = document.referrer;
-        
-        if (source === "official" || referrer.includes("earnlinks.io") || referrer.includes("lootdest.org") || referrer.includes("steps.html")) {
-            if (source === "official") {
-                const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-                window.history.replaceState({}, document.title, cleanUrl);
+async function generateKey() {
+    try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        const data = await res.json();
+        const ip = data.ip;
+
+        const day = Math.floor(Date.now() / 86400000);
+        const seed = parseInt(ip.replace(/\./g,'').slice(0,6)) + day;
+
+        function rnd() {
+            let x = Math.sin(seed++) * 10000;
+            return x - Math.floor(x);
+        }
+
+        const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+        let key = "UKM-";
+
+        for (let i = 0; i < 4; i++) {
+            let part = "";
+            for (let j = 0; j < 4; j++) {
+                part += chars[Math.floor(rnd() * chars.length)];
             }
-            document.getElementById('mainContainer').style.display = "block";
+            key += part + (i < 3 ? "-" : "");
+        }
+
+        document.getElementById("finalKey").innerText = key;
+
+    } catch (e) {
+        document.getElementById("finalKey").innerText = "NO INTERNET";
+    }
+}
+
+function copyKey() {
+    const text = document.getElementById("finalKey").innerText;
+    navigator.clipboard.writeText(text);
+
+    const btn = document.getElementById("copyBtn");
+    btn.innerText = "COPIED ✔";
+    setTimeout(() => btn.innerText = "COPY KEY", 2000);
+}
+
+function check() {
+    const ok = location.search.includes("official");
+    if (!ok) {
+        document.getElementById("mainContainer").style.display = "none";
+        document.getElementById("b            document.getElementById('mainContainer').style.display = "block";
             generateLockedKey(); 
         } else {
             document.getElementById('mainContainer').style.display = "none";
